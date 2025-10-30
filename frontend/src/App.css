@@ -1,0 +1,135 @@
+/* === SIMPLE NEON-GLASS THEME === */
+:root {
+  --neon-fuchsia: #ff66cc;
+  --neon-blue: #00bfff;
+  
+  --neon-purple: #b366ff;
+  --neon-aqua: #00ffff;
+
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* === APP BACKGROUND === */
+/* === APP BACKGROUND === */
+.App {
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px var(--shadow);
+  margin: 2rem auto;
+  width: min(95%, 1200px);
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, var(--neon-fuchsia), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  color:black !important;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  margin: 0 0.25rem;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: linear-gradient(45deg, var(--neon-fuchsia), var(--neon-blue));
+  color: black !important;
+}
+
+/* === HEADER === */
+.App-header {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  width: min(90%, 1000px);
+  box-shadow: 0 6px 25px var(--shadow);
+  text-align: center;
+}
+
+/* === CARD === */
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: min(90%, 700px);
+  box-shadow: 0 6px 25px var(--shadow);
+}
+
+.card h2 {
+  background: linear-gradient(45deg, var(--neon-fuchsia), var(--neon-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* === BUTTONS === */
+.btn {
+  border: none;
+  border-radius: 15px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--neon-fuchsia), var(--neon-blue));
+  color: black;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid var(--glass-border);
+  color: var(--neon-fuchsia);
+  padding: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 0.25rem 0;
+  }
+
+  .App-header,
+  .card {
+    padding: 1.5rem;
+  }
+}
